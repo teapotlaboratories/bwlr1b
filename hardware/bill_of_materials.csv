@@ -10,4 +10,4 @@ Id,Designator,Package,Quantity,Designation,Supplier and ref,Notes
 9,SW3,SW_SPST_Omron_B3FS-100xP,1,RESET,,
 10,SW4,SW_SPST_Omron_B3FS-100xP,1,BOOT,,
 11,U1,BME680-PSON80P300X300X100-8N,1,BME680,,
-12,U2,RAK3172,1,RAK3172,RAKwireless,
+12,U2,RAK3172,1,RAK3172 without IPEX,RAKwireless,
