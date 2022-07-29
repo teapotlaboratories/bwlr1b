@@ -1,0 +1,13 @@
+Id,Designator,Package,Quantity,Designation,Supplier and ref,Notes
+1,BT2,BatteryHolder_Keystone_2462_2xAA,1,2x AA,,Mutual Exclusive with BT3 and BT1
+2,"BT3,BT1",BatteryHolder_Keystone_3008_1x2450,2,CR2450,,Mutual Exclusive with BT2
+3,"C5,C12,C11,C3",C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,4,100nF,,
+4,"C9,C8,C10,C2,C4,C13,C14,C6,C1,C7",CP_EIA-3528-15_AVX-H_Pad1.50x2.35mm_HandSolder,10,330uF,,Optional
+5,J3,SMA_Amphenol_132289_EdgeMount,1,915MHz SMA,,
+6,Q1,SOT-23,1,AO3407,,
+7,R5,R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,1,1K,,
+8,"R7,R2,R3,R6",R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,4,10K,,
+9,SW3,SW_SPST_Omron_B3FS-100xP,1,RESET,,
+10,SW4,SW_SPST_Omron_B3FS-100xP,1,BOOT,,
+11,U1,BME680-PSON80P300X300X100-8N,1,BME680,,
+12,U2,RAK3172,1,RAK3172,RAKwireless,
