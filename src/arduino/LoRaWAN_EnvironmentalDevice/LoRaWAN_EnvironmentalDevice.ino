@@ -2,12 +2,14 @@
 #include<CayenneLPP.h>
 #include "Zanshin_BME680.h"  // Include the BME680 Sensor library
 
-#define OTAA_DEVEUI   {0xAC,0x1F,0x09,0xFF,0xFE,0x08,0x34,0x94}
-#define OTAA_APPKEY   {0x82, 0xe0, 0x1c, 0x7e, 0x20, 0xe1, 0x0e, 0x75, 0x1c, 0xdc, 0x11, 0x53, 0x77, 0x35, 0x69, 0xb7}
+#define OTAA_DEVEUI   {0xac, 0x1f, 0x09, 0xff, 0xfe, 0x08, 0x33, 0x7f}
+#define OTAA_APPKEY   {0xb5, 0x12, 0xfb, 0x72, 0xfc, 0x87, 0x20, 0x2a, 0xb3, 0x90, 0xc1, 0xbe, 0x8e, 0x46, 0x99, 0xf6}
 #define OTAA_APPEUI   {0x0E, 0x0D, 0x0D, 0x01, 0x0E, 0x01, 0x02, 0x0E}
 #define OTAA_PERIOD   (600*1000) // 10 minute seconds
 #define OTAA_BAND     (RAK_REGION_US915)
 #define TXP 14        // FCC limits TX power to 14 dBM
+
+#define TRY_SEND_REQUEST 20 // try calling api.lorawan.send()
 
 BME680_Class BME680;  ///< Create an instance of the BME680 class
 
@@ -152,15 +154,14 @@ void uplink_routine()
 {
   static int32_t  temp, humidity, pressure, gas;  // BME readings
   BME680.getSensorData(temp, humidity, pressure, gas);  // Get readings
-  static float batt = api.system.bat.get();
+  static float batt = api.system.bat.get(); // use api system for example, does not actually works!
 
   payload.reset();
   payload.addTemperature(1, ((float) temp) / 100);
   payload.addRelativeHumidity(2, ((float) humidity) / 1000);
-//  payload.addVoltage(3, batt);
   payload.addBarometricPressure(3, ((float) pressure) / 100);
-//  payload.addGenericSensor(4, ((float) gas) / 100);
-  //payload.addVoltage(5, batt_f);
+  payload.addGenericSensor(4, ((float) gas) / 100);
+  payload.addVoltage(5, batt);
   
 
   Serial.printf("Data Packet: %d\n", payload.getSize());
@@ -168,10 +169,16 @@ void uplink_routine()
   Serial.printf("Battery: %f\n", batt);
 
   /** Send the data package */
-  if (api.lorawan.send(payload.getSize(), (uint8_t *) payload.getBuffer(), 1)) {
-    Serial.println("Sending is requested");
-  } else {
-    Serial.println("Sending failed");
+  uint8_t try_send_request = TRY_SEND_REQUEST;
+  while( !api.lorawan.send(payload.getSize(), (uint8_t *) payload.getBuffer(), 1) && try_send_request--) {
+   Serial.println("Retry sending payload again");
+   delay(1000);
+  }
+  
+  if (!try_send_request){  
+    Serial.println("Sending is fail");
+  } else { 
+    Serial.println("Sending is requested"); 
   }
 }
 
