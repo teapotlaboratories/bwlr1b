@@ -1,4 +1,5 @@
 
+  
 # Teapot BWLR1B
  <p align="center"> <img src="https://raw.githubusercontent.com/teapotlaboratories/bwlr1b/master/docs/images/cr2450_aa_with_case.jpg" alt="drawing"  width="50%" height="50%"/></p>
  
@@ -45,7 +46,17 @@ By using the RAK3172 module, it is possible to use the IPEX [variant](https://st
  The cases are available for the CR2450 variant and the AA variant, 3D printable with any generic 3D printer with/without suppport (depends on the orientation). The STL files are available [here](https://github.com/teapotlaboratories/bwlr1b/tree/master/hardware/case)
  <p align="center"> <img src="https://github.com/teapotlaboratories/bwlr1b/raw/master/docs/images/open_case.jpg" alt="drawing"  width="50%" height="50%"/></p> 
 
+### Measurement
+Power consumption and solar charging current are measured using [Nordic PPK2](https://www.nordicsemi.com/Products/Development-hardware/Power-Profiler-Kit-2).
+The following are the summary of the measurement:
+- Transmit 14dBm:  446ms @ 43mA
+- Deep-Sleep : 2 uA
 
+<p align="center"><img src="https://github.com/teapotlaboratories/bwlr1b/raw/master/docs/measurement/deep_sleep.png" alt="deep_sleep"  width="90%" height="90%"/><br><b>Deep-Sleep</b></p>
+
+<p align="center"><img src="https://github.com/teapotlaboratories/bwlr1b/raw/master/docs/measurement/bme680_measure_and_lora_transmit.png" alt="bme688_measure_and_lora_transmit"  width="90%" height="90%"/><br><b>BME688 Measure and LoRa Transmit</b></p>
+
+More measurement can be found [here](https://github.com/teapotlaboratories/bwlr1b/tree/main/docs/measurement)
  
 ### Bill Of Materials
 Most of the components are generic and can be bought from any electornics/semi-conductor distributor. RAK3172 is the only component available in [RAKwireless store.](https://store.rakwireless.com/products/wisduo-lpwan-module-rak3172?variant=40014759493830). The bill of materials can be downloaded [here](https://raw.githubusercontent.com/teapotlaboratories/bwlr1b/master/hardware/bill_of_materials.csv)
