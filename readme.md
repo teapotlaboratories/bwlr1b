@@ -1,5 +1,6 @@
 
   
+  
 # Teapot BWLR1B
  <p align="center"> <img src="https://raw.githubusercontent.com/teapotlaboratories/bwlr1b/master/docs/images/cr2450_aa_with_case.jpg" alt="drawing"  width="50%" height="50%"/></p>
  
@@ -7,6 +8,10 @@ Teapot BWLR1B is a wireless LoRa environmental sensor capable of sensing tempera
 By using an STM32WLE MCU, the device is capable of multi-year operation before changing the batteries
 
 Teapot BWLR1B is part of  [Teapot open-hardware project](https://github.com/teapotlaboratories). 
+
+## Disclaimer
+- The 1KM+ range have not been verified yet
+- The position of the BME680 sensor on the board might not be the most efficient 
 
 ## Specification
 
