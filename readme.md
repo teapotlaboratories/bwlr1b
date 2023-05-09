@@ -13,6 +13,9 @@ Teapot BWLR1B is part of  [Teapot open-hardware project](https://github.com/teap
 - The 1KM+ range have not been verified yet
 - The position of the BME680 sensor on the board might not be the most efficient 
 
+## Future Works
+- Change `SW4` wiring from GND to 3V3, to allow booting to STM32WLE USART Bootloader. This enable the user to flash the RAK3172 module using STM32CubeProgrammer without ST-Link.
+
 ## Specification
 
 - [RAK3172](https://docs.rakwireless.com/Product-Categories/WisDuo/RAK3172-Module/Overview/): An STM32WLE5CC module
