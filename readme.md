@@ -9,6 +9,9 @@ By using an STM32WLE MCU, the device is capable of multi-year operation before c
 
 Teapot BWLR1B is part of  [Teapot open-hardware project](https://github.com/teapotlaboratories). 
 
+## Sponsorship
+Huge thanks to [PCBWay](https://www.pcbway.com/) to sponsored this project! Most of the project in Teapotlabs from PCB board, PCB Assembly, and 3D Printing is done through their rapid-prototyping services. The process from ordering to delivery of the device was really smooth and easy. We were really happy with the quality of the assembly and especially the customer support that was really easy to work with, where they help us identify and fix issue such as verifying BOM, checking components for assembly and even replacing damaged parts at no cost.
+
 ## Disclaimer
 - The 1KM+ range have not been verified yet
 - The position of the BME680 sensor on the board might not be the most efficient 
