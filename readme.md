@@ -10,7 +10,13 @@ By using an STM32WLE MCU, the device is capable of multi-year operation before c
 Teapot BWLR1B is part of  [Teapot open-hardware project](https://github.com/teapotlaboratories). 
 
 ## Sponsorship
-Huge thanks to [PCBWay](https://www.pcbway.com/) to sponsored this project! Most of the project in Teapotlabs from PCB board, PCB Assembly, and 3D Printing is done through their rapid-prototyping services. The process from ordering to delivery of the device was really smooth and easy. We were really happy with the quality of the assembly and especially the customer support that was really easy to work with, where they help us identify and fix issue such as verifying BOM, checking components for assembly and even replacing damaged parts at no cost.
+We sincerely thank [PCBWay](https://www.pcbway.com/) for their sponsorship and support. Their high-quality rapid-prototyping services, including PCB Board manufacturing, PCB Assembly, and 3D Printing, have been a great asset to our work.
+We truly appreciate their attention to detail in helping us:
+  - Identify design issues
+  - Verify our BOM (Bill of Materials)
+  - Verify the final product after assembly
+
+On top of their technical expertise, their customer support has been responsive, and easy to work with.
 
 ## Disclaimer
 - The 1KM+ range have not been verified yet
